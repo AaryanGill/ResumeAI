@@ -3,11 +3,12 @@
   publish = "."
 
 [functions]
+  # This tells Netlify exactly which folders to zip up for the Python function
   directory = "netlify/functions"
-  included_files = ["*.py", "templates/**", "static/**"]
+  included_files = ["templates/**", "static/**", "app/**", "*.py"]
 
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/app"
   status = 200
-  force = true
+  force = true # Ensures traffic goes to your function instead of a 404 page
