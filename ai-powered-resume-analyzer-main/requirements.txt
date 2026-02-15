@@ -5,3 +5,4 @@ pdfminer.six==20221105
 Werkzeug==3.0.1
 gunicorn==21.2.0
 setuptools>=42.0.0
+serverless-wsgi
