@@ -1,5 +1,6 @@
 import serverless_wsgi
-from run import app # Change 'run' to 'app' if your Flask instance is in app.py
+from run import app  # This imports the 'app' instance created in your run.py
 
 def handler(event, context):
+    # This bridges the serverless request to your Flask app
     return serverless_wsgi.handle_request(app, event, context)
