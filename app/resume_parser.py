@@ -16,7 +16,10 @@ load_dotenv()
 
 # Get API key from environment variable
 api_key = os.getenv('OPENAI_API_KEY')
-print(f"Loaded API key: {api_key[:10]}...")  # Print first 10 chars for debugging
+if api_key:
+    print(f"Loaded API key: {api_key[:10]}...")
+else:
+    print("No API key found, using fallback mode.") # Print first 10 chars for debugging
 
 # Set the API key for the openai module if it was imported
 if 'openai' in globals():
