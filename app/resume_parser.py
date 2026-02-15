@@ -135,10 +135,15 @@ def fallback_resume_analysis():
 
 def analyze_resume(resume_text):
     """Analyze the resume using OpenAI's API"""
-    # Reference the global variables
-    global is_new_version, client, openai
+    # 1. Reference the global variables
+    global is_new_version, client, openai, api_key
     
-    # Set up retry parameters
+    # 2. ADD THIS CHECK HERE (The "Safety Gate")
+    if not api_key or api_key.strip() == "":
+        print("⚠️ No API key detected. Skipping OpenAI and using fallback.")
+        return fallback_resume_analysis()
+    
+    # 3. Existing retry parameters
     max_retries = 3
     retry_delay = 2  # seconds
     
