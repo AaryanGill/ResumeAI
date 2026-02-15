@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <div class="hero-section">
+    <h1>AI Resume Analyzer</h1>
+    <p class="intro-text">
+      Get your <strong>ATS Compatibility Score</strong> and AI-powered feedback
+      to improve your chances of landing your dream job.
+    </p>
+
+    <!-- Feature highlights -->
+    <div class="feature-highlights">
+      <div class="feature-item">
+        <div class="feature-icon">🎯</div>
+        <h3>ATS Score</h3>
+        <p>Get 0-100 compatibility rating</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <h3>Detailed Breakdown</h3>
+        <p>5-category analysis with insights</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚀</div>
+        <h3>Actionable Tips</h3>
+        <p>Specific improvement suggestions</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🤖</div>
+        <h3>AI-Powered</h3>
+        <p>Advanced OpenAI analysis</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="upload-section">
+    <h2>Upload Your Resume</h2>
+    <p class="upload-subtitle">
+      PDF format • Secure processing • Instant results
+    </p>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <div class="upload-area">
+        <div class="upload-icon">📄</div>
+        <input
+          type="file"
+          name="resume"
+          accept=".pdf"
+          required
+          id="fileInput"
+        />
+        <label for="fileInput" class="upload-label">
+          <span class="upload-text">Choose PDF file or drag & drop</span>
+          <span class="upload-size">Max size: 10MB</span>
+        </label>
+      </div>
+      <button type="submit" class="analyze-btn">
+        <span class="btn-icon">🔍</span>
+        Analyze Resume
+      </button>
+    </form>
+  </div>
+
+  <div id="loading" class="loading">
+    <div class="loading-content">
+      <i class="fas fa-circle-notch"></i>
+      <p>Analyzing your resume...</p>
+      <small>This might take a moment while our AI reviews your content</small>
+    </div>
+  </div>
+
+  <div id="results"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock %}

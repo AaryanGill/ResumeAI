@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer - Redirecting...</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 25px auto;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #2980b9;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #3498db;
+      }
+      .tagline {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">AI Resume Analyzer</div>
+      <div class="tagline">Powered by OpenAI</div>
+      <h1>Enhance Your Resume with AI</h1>
+      <p>You are being redirected to the AI Resume Analyzer application...</p>
+      <div class="loader"></div>
+      <p>
+        If you are not redirected automatically, please click the button below:
+      </p>
+      <a href="https://ai-powered-resume-analyzer-wtej.onrender.com/" class="button"
+        >Go to Resume Analyzer</a
+      >
+    </div>
+
+    <script>
+      // Redirect after a short delay (2.5 seconds)
+      setTimeout(function () {
+        window.location.href =
+          "https://ai-powered-resume-analyzer.onrender.com/";
+      }, 2500);
+    </script>
+  </body>
+</html>
