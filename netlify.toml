@@ -1,6 +1,8 @@
 [build]
   command = "pip install -r requirements.txt"
   publish = "."
+  [build.environment]
+    PYTHON_VERSION = "3.8"
 
 [functions]
   # This tells Netlify exactly which folders to zip up for the Python function
