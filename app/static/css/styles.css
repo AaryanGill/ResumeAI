@@ -1,0 +1,322 @@
+/* General Styles */
+:root {
+  --primary-dark: #0f172a;
+  --accent-blue: #3b82f6;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-gray: #f8fafc;
+  --border-color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-gray);
+  color: var(--text-dark);
+}
+
+/* Header - Match Image 1 Navy Top Bar */
+header {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 20px 0;
+}
+
+.header-container {
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* Logo Left, Nav Right */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Feature Highlights Grid */
+.feature-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.feature-item h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Upload Section Card - Match Image 1 */
+.upload-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.upload-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.upload-subtitle {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+/* Custom Upload Area */
+.upload-area {
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+#fileInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.upload-text {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.upload-size {
+  display: none; /* Matches the clean text input look in Image 1 */
+}
+
+/* Analyze Button - Solid Navy */
+.analyze-btn {
+  width: 100%;
+  background-color: var(--primary-dark);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+/* --- Results Layout --- */
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* The horizontal container for the top two cards */
+#results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exact 50/50 split */
+  gap: 20px;
+}
+
+.result-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* ATS Score & Progress Bar */
+.score-big {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 10px 0;
+}
+
+.progress-bg {
+  background-color: #f1f5f9;
+  height: 12px;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  background-color: #3b82f6; /* Blue bar */
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
+/* Skills Pills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.skill-badge {
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Detailed Sections (Full Width) */
+.preview-card {
+  width: 100%;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.strength-box h4 { color: #10b981; } /* Green */
+.improvement-box h4 { color: #f59e0b; } /* Amber */
+
+ul {
+  padding-left: 20px;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  #results-grid, .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Footer */
+/* Footer - Matches Header Theme */
+footer {
+  background-color: var(--primary-dark);
+  color: white; /* Changes text to white for readability on dark background */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border for depth */
+  margin-top: 50px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0.8; /* Slightly softens the text color */
+}
+
+/* Loading */
+.loading {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.fa-circle-notch {
+  animation: spin 1s linear infinite;
+  color: var(--accent-blue);
+  font-size: 2rem;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.upload-text {
+  /* ... existing styles ... */
+  color: var(--text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds '...' if filename is too long */
+  max-width: 90%;
+}
