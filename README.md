@@ -45,22 +45,33 @@ This project demonstrates the integration of AI with modern web technologies.
 
 ## ⚙️ Installation & Setup
 
-### 2️⃣ Navigate to Project Folder
-
+### 1️⃣ Navigate to Project Folder
 ```bash
-cd ai-powered-resume-analyzer
+cd D:\ai-powered-resume-analyzer-main
 ```
 
-### 3️⃣ Install Dependencies
+### 2️⃣ Create Virtual Environment
 
 ```bash
-npm install
+python -m venv venv
 ```
 
-### 4️⃣ Start the Application
+### 3️⃣ Activate Virtual Environment
 
 ```bash
-npm start
+venv\Scripts\activate
+```
+
+### 4️⃣ Install Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 5️⃣ Start the Application
+
+```bash
+python run.py
 ```
 
 ---
