@@ -31,8 +31,7 @@ This project demonstrates the integration of AI with modern web technologies.
 - React (if applicable)
 
 ### **Backend**
-- Node.js
-- Express.js
+- Flask
 
 ### **AI / NLP**
 - AI API Integration
